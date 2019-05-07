@@ -2,7 +2,7 @@ package model
 
 import scala.collection.mutable
 
-object AcceptedDenominations{
+class AcceptedDenominations{
   var acceptedCoins=new mutable.ListBuffer[Int]
   var acceptedNotes=new mutable.ListBuffer[Int]
 }

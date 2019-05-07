@@ -2,15 +2,15 @@ package services.admin
 
 import model._
 
-class Admin {
-  def addItem(item: Item): Unit ={
-    ItemList.items.+=(item)
+class Admin(vendingMachine: VendingMachine){
+  def addItem(item: Item,quantity:Int): Unit ={
+    vendingMachine.itemList.items.+=((item,quantity))
   }
 
-  def addDenomination(types:Money,denomination:Int): Unit ={
+  def addDenomination(vendingMachine: VendingMachine,types:Money,denomination:Int): Unit ={
     types match {
-      case Coins=>AcceptedDenominations.acceptedCoins.+=(denomination)
-      case Notes=>AcceptedDenominations.acceptedNotes.+=(denomination)
+      case Coins=>vendingMachine.acceptedDenominations.acceptedCoins.+=(denomination)
+      case Notes=>vendingMachine.acceptedDenominations.acceptedNotes.+=(denomination)
     }
   }
 

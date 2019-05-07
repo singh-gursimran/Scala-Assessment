@@ -1,4 +1,4 @@
 package model
 
-class Item (price:Int,name:String)
+class Item (val price:Int,val name:String)
 

@@ -2,6 +2,6 @@ package model
 
 import scala.collection.mutable
 
-object ItemList {
-  var items=new mutable.ListBuffer[Item]
+class ItemList{
+  var items=new mutable.HashMap[Item,Int]
 }
